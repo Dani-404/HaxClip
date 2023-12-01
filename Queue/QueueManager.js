@@ -76,7 +76,7 @@ export default class QueueManager {
                 instance.progressQueue();
             })
         }).catch((e) => {   
-            Server.page.goto('http://45.144.153.160/');         
+            Server.page.goto('http://google.com');         
             Server.logger.sendLog(LogLevel.ERROR, `Impossible to fetch clip [${queue.id}] by ${queue.byUser.username}: ${e.toString()}.`);
             queue.client.sendPlayerMsg(`An error occured with your clip.`, queue.byUser.id, 0xff4a4a, null, 2);
             try {
