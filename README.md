@@ -8,8 +8,11 @@ $ node main.js
 ```
 
 ### Config
-<b>API_KEY</b> is the key to authorizing websocket connections<br>
+<b>API_KEY</b> is the key to authorizing websockets connections<br>
 <b>LIMIT_CLIP_BY_USER</b> is the limit of clips per users
+
+### Copyrights
+Free to use, it would be nice to keep the copyrights.
 
 ### Minimal configuration
 This project using puppeteer and recording frames from canvas. A server of at least 4GB of ram is recommended for performances.
