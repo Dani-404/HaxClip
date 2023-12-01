@@ -1,0 +1,25 @@
+{
+	"manifest_version": 2,
+	"name": "HaxReplay",
+	"version": "1.0",
+	"description": "Haxball Headless",
+	"icons": {
+        "16": "icons/icon16.png",
+        "48": "icons/icon48.png",
+        "128": "icons/icon128.png"
+    },
+	"background": {
+		"scripts": ["background.js"]
+	},
+	"content_scripts": [{
+		"matches": ["*://*.haxball.com/*", "*://haxball.com/*"],
+		"js": ["website/assets/GIFEncoder.js", "website/assets/NeuQuant.js", "website/assets/LZWEncoder.js"],
+		"all_frames": true
+	}],
+	"web_accessible_resources": ["website/game/replay-min.js"],
+	"permissions": [
+       "webRequest",
+       "webRequestBlocking",
+       "*://*.haxball.com/*", "*://haxball.com/*"
+	]
+}
