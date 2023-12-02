@@ -41,6 +41,16 @@ function connectToHaxClip() {
 
 connectToHaxClip();
 
+function getDate(){
+    let data = new Date(),
+    day = data.getDate().toString().padStart(2, '0'),
+    month = (data.getMonth()+1).toString().padStart(2, '0'),
+    year = data.getFullYear(),
+    hours = data.getHours().toString().padStart(2, '0'),
+    minutes = data.getMinutes().toString().padStart(2, '0');
+    return `${day}-${month}-${year}-${hours}h${minutes}m`;
+}
+
 function processClips(clipsList) {
     const form = new FormData();
 	form.append("file", new File([room.stopRecording()], `HaxReplay-${getDate()}.hbr2`, {type: "text/plain"}));
