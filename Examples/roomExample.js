@@ -41,6 +41,13 @@ function connectToHaxClip() {
 
 connectToHaxClip();
 
+function sendMsg(key, data = null) {
+    if(socket == null || socket.readyState !== WebSocket.OPEN)
+        return;
+    
+    socket.send(JSON.stringify({key: key, data:data}));
+}
+
 function getDate(){
     let data = new Date(),
     day = data.getDate().toString().padStart(2, '0'),
