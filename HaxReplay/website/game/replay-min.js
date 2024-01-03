@@ -2046,7 +2046,7 @@ function Go(text, key){
         v.Jc(a.get("timer"), this.ub.h);
         this.Ua.ha.width = gifWidth;
         this.Ua.ha.height = gifHeight;
-        //v.Jc(a.get("canvas"), this.Ua.ha)
+		//v.Jc(a.get("canvas"), this.Ua.ha)
     }
     function sa(a, b) {
         this.jf = [];
@@ -6929,7 +6929,7 @@ function Go(text, key){
                 this.Nj(a);
                 this.b.font = "11px Arial";
                 this.b.fillStyle = "white";
-                this.b.fillText(Go("23051126000800530d124426132e", "kdielapso"), 31, 106);
+                this.b.fillText(Go("23051126000800530d124426132e", "kdielapso"), (gifWidth - 165)/2, (gifHeight - 15)/2);
 
                 if(startClip)
                     encoder.addFrame(this.b);
